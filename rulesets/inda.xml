@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<ruleset name="Inda Rules"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        Used for the inda course
+    </description>
+
+    <exclude-pattern>.*/.*Test.java*</exclude-pattern>
+    <!-- Your rules will come here -->
+    <rule ref="category/java/design.xml/CognitiveComplexity">
+        <properties>
+            <property name="reportLevel" value="10" />
+        </properties>
+    </rule>
+
+    <rule ref="category/java/design.xml/AvoidDeeplyNestedIfStmts">
+        <properties>
+            <property name="problemDepth" value="3" />
+        </properties>
+    </rule>
+
+    <rule ref="category/java/design.xml/ExcessiveMethodLength">
+        <properties>
+            <property name="minimum" value="100.0" />
+        </properties>
+    </rule>
+
+    <!-- Number of pure statement lines in class and method. -->
+    <rule ref="category/java/design.xml/NcssCount">
+        <properties>
+            <property name="methodReportLevel" value="60" />
+            <property name="classReportLevel" value="1500" />
+            <property name="ncssOptions" value="" />
+        </properties>
+    </rule>
+
+    <rule ref="category/java/design.xml/AvoidThrowingNullPointerException" />
+    <rule ref="category/java/design.xml/AvoidCatchingGenericException" />
+    <rule ref="category/java/design.xml/LogicInversion" />
+
+    <!-- readability for boolean -->
+    <rule ref="category/java/design.xml/SimplifyBooleanExpressions" />
+    <rule ref="category/java/design.xml/SimplifyBooleanReturns" />
+
+    <rule ref="category/java/design.xml/SingularField" />
+    <!-- check for systemprintln -->
+    <rule ref="category/java/bestpractices.xml/SystemPrintln" />
+
+    <rule ref="category/java/bestpractices.xml/UnusedAssignment" />
+    <rule ref="category/java/bestpractices.xml/UnusedLocalVariable" />
+    <rule ref="category/java/bestpractices.xml/UnusedPrivateField" />
+    <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod" />
+    <rule ref="category/java/bestpractices.xml/UseCollectionIsEmpty" />
+
+
+
+    <!-- documentation -->
+    <rule ref="category/java/documentation.xml/CommentRequired">
+        <properties>
+            <property name="methodWithOverrideCommentRequirement" value="Ignored" />
+            <property name="accessorCommentRequirement" value="Ignored" />
+            <property name="classCommentRequirement" value="Required" />
+            <property name="fieldCommentRequirement" value="Ignored" />
+            <property name="publicMethodCommentRequirement" value="Required" />
+            <property name="protectedMethodCommentRequirement" value="Required" />
+            <property name="enumCommentRequirement" value="Required" />
+            <property name="serialVersionUIDCommentRequired" value="Ignored" />
+            <property name="serialPersistentFieldsCommentRequired" value="Ignored" />
+        </properties>
+    </rule>
+
+
+
+    <!-- Errorprone -->
+    <rule ref="category/java/errorprone.xml/AvoidCatchingNPE" />
+    <rule ref="category/java/errorprone.xml/AvoidLiteralsInIfCondition">
+        <properties>
+            <property name="ignoreMagicNumbers" value="-1,0" />
+            <property name="ignoreExpressions" value="true" />
+        </properties>
+    </rule>
+
+    <rule ref="category/java/errorprone.xml/AvoidMultipleUnaryOperators" />
+    <rule ref="category/java/errorprone.xml/CompareObjectsWithEquals" />
+    <rule ref="category/java/errorprone.xml/EmptyCatchBlock" />
+    <rule ref="category/java/errorprone.xml/EmptyIfStmt" />
+    <rule ref="category/java/errorprone.xml/EmptyStatementNotInLoop" />
+    <rule ref="category/java/errorprone.xml/EmptyStatementBlock" />
+    <rule ref="category/java/codestyle.xml/UselessParentheses" />
+
+    <!-- New -->
+    <rule ref="category/java/bestpractices.xml/UnusedImports" />
+    <rule ref="category/java/documentation.xml/UncommentedEmptyMethodBody" />
+
+    <rule ref="category/java/codestyle.xml/FormalParameterNamingConventions" />
+    <rule ref="category/java/codestyle.xml/LocalVariableNamingConventions" />
+    <rule ref="category/java/codestyle.xml/MethodNamingConventions" />
+    <rule ref="category/java/errorprone.xml/UnconditionalIfStatement" />
+    
+    <!-- New New -->
+    <rule ref="category/java/bestpractices.xml/MissingOverride" />
+    <rule ref="category/java/codestyle.xml/UseDiamondOperator" />
+    
+    <rule ref="category/java/bestpractices.xml/OneDeclarationPerLine">
+        <properties>
+            <property name="strictMode" value="true" />
+        </properties>
+    </rule>
+
+
+</ruleset>
