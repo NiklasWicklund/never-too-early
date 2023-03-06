@@ -3,4 +3,4 @@
 
 Official repository for "It is never too early to learn about code quality"-thesis.
 
-**Disclaimer:** Please note that some parts of the code in repository cannot be run due to the fact that the required data has not been anonymized.
+**Disclaimer:** Please note that some parts of the code in this repository cannot be run due to the fact that the required data has not been anonymized.
